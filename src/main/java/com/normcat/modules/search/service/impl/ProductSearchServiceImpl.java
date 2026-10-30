@@ -75,6 +75,7 @@ public class ProductSearchServiceImpl implements ProductSearchService {
                         .name(product.getName())
                         .price(product.getPrice())
                         .categoryName(product.getCategory() != null ? product.getCategory().getName() : null)
+                        .normalizationStatus(product.getNormalizationStatus())
                         .normalizedAttributes(attributesByProductId.getOrDefault(product.getId(), Collections.emptyMap()))
                         .build())
                 .toList();

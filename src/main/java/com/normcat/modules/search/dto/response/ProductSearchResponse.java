@@ -1,5 +1,6 @@
 package com.normcat.modules.search.dto.response;
 
+import com.normcat.modules.product.entity.ProductNormalizationStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,6 +32,9 @@ public class ProductSearchResponse {
 
     @Schema(description = "Category Name", example = "Áo sơ mi nam")
     private String categoryName;
+
+    @Schema(description = "Product Normalization Status", example = "NORMALIZED")
+    private ProductNormalizationStatus normalizationStatus;
 
     @Builder.Default
     @Schema(description = "Map of canonical attribute code to display value", example = "{\"COLOR\": \"Đỏ\", \"SIZE\": \"XL\"}")
